@@ -7,6 +7,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
+/**
+ * @author Administrator
+ */
 @SpringBootApplication
 @EnableEurekaClient //eureka客户端注册到注册中心
 //启动该服务是加载自定义的ribbon配置类，是配置生效 name为这个微服务使用 configuration为自定义的配置类
