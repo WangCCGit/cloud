@@ -43,7 +43,8 @@ public class SenseAgroOrderService {
             packageParams.put("notify_url", WechatConfig.notify_url);//支付成功后的回调地址
             packageParams.put("trade_type", WechatConfig.TRADETYPE);//支付方式
             packageParams.put("openid", openId + "");//用户的openID，自己获取
-            String prestr = PayUtil.createLinkString(packageParams); // 把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串
+            // 把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串
+            String prestr = PayUtil.createLinkString(packageParams);
             log.info("----------prestr:" + prestr);
             log.info("----------调用统一下单接口-------");
             //MD5运算生成签名，这里是第一次签名，用于调用统一下单接口
